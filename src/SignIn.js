@@ -13,6 +13,11 @@ function App() {
         Sign In
       </button>
 
+      <button className="btn btn-primary" onClick={handleShow}>
+        Register Here
+      </button>
+
+
       {/* Modal */}
       <div
         className={`modal fade ${showModal ? "show d-block" : ""}`}
