@@ -13,6 +13,11 @@ function App() {
         Sign In
       </button>
 
+      <button className="btn btn-primary" onClick={handleShow}>
+        Register Here
+      </button>
+
+
       {/* Modal */}
       <div
         className={`modal fade ${showModal ? "show d-block" : ""}`}
@@ -20,7 +25,7 @@ function App() {
         role="dialog"
         style={{ display: showModal ? "block" : "none" }}
       >
-        <div className="modal-dialog" role="document">
+        <div className="modal-dialog " role="document">
           <div className="modal-content">
             <div className="modal-header">
               <h3 className="modal-title">Welcome back !</h3>

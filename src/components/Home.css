@@ -1,4 +1,12 @@
 
+
+.tajdiv{
+ background: rgb(2,0,36);
+ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(16,25,124,1) 40%, rgba(0,134,255,1) 91%);
+
+}    
+
+
 .tajdiv img {
  height: 50vh;
  border-radius: 50px;
