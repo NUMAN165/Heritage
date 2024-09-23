@@ -11,8 +11,8 @@ function Nav() {
     <Navbar expand="lg" className="navbarMain">
       <Container>
         <Navbar.Brand className='navbar'>Heritage Pass</Navbar.Brand>
-        <SignIn />
-      </Container>
+        <SignIn />                                                                    
+      </Container>                                                                                                                                  
     </Navbar>
   );
 } 
