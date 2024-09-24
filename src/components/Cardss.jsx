@@ -4,15 +4,15 @@ import Card from "react-bootstrap/Card";
 import "../App.css";
 
 const cardData = [
-  { id: 1, title: "Taj Mahal", imgSrc: "taj1.png" },
-  { id: 2, title: "Card Title", imgSrc: "qutub.png" },
-  { id: 3, title: "Card Title", imgSrc: "alberthall.png" },
+  { id: 1, title: "Taj Mahal", imgSrc: "./Images/taj1.png" },
+  { id: 2, title: "Qutub Minar", imgSrc: "./Images/qutub.png" },
+  { id: 3, title: "Albert Hall Meuseum", imgSrc: "./Images/alberthall.png" },
 ];
 
 const cardData2 = [
-  { id: 4, title: "Card Title", imgSrc: "taj1.png" },
-  { id: 5, title: "Card Title", imgSrc: "taj1.png" },
-  { id: 6, title: "Card Title", imgSrc: "taj1.png" },
+  { id: 4, title: "Humayuns Tomb", imgSrc: "./Images/humayans.png" },
+  { id: 5, title: "Ajanta Caves", imgSrc: "./Images/Ajanta.png" },
+  { id: 6, title: "Patna Meusems", imgSrc: "./Images/Patna.png" },
 ];
 
 const Cardss = () => {

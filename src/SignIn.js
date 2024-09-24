@@ -13,9 +13,9 @@ function App() {
         Sign In
       </button>
 
-      <button className="btn btn-primary" onClick={handleShow}>
+      {/* <button className="btn btn-primary" onClick={handleShow}>
         Register Here
-      </button>
+      </button> */}
 
 
       {/* Modal */}
