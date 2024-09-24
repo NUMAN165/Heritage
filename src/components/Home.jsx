@@ -1,6 +1,6 @@
 
 import "../App.css"
-import Cardss from "../src/components/Cardss";
+import Cardss from "./Cardss";
 
 
 const Home = ()=> {
