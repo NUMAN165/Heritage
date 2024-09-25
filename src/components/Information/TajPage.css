@@ -1,0 +1,36 @@
+.TajInfoPage img {
+  height: 100vh;
+  width: 100vw;
+  filter: blur(1px);
+}
+
+.TajInfoPage {
+  position: relative;
+}
+
+.imageContainer {
+  position: relative;
+  text-align: center;
+}
+
+.overlayTable {
+  position: absolute;
+  top: 20%; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%); /* Center the table horizontally */
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+  border-collapse: collapse;
+  z-index: 1; /* Ensure the table is above the image */
+}
+
+.overlayTable th,
+.overlayTable td {
+  border: 1px solid rgba(0, 0, 0, 0.5); /* Semi-transparent border */
+  padding: 8px;
+  text-align: center; /* Center text in cells */
+  color: black; /* Text color */
+}
+
+.overlayTable th {
+  background-color: rgba(255, 255, 255, 0.5); /* Slightly more opaque header */
+}

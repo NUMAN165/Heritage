@@ -4,7 +4,7 @@ import Card from "react-bootstrap/Card";
 import "../App.css";
 
 const cardData = [
-  { id: 1, title: "Taj Mahal", imgSrc: "./Images/taj1.png" },
+  { id: 1, title: "Taj Mahal", imgSrc: "./Images/taj1.png",href:"/TajPage" },
   { id: 2, title: "Qutub Minar", imgSrc: "./Images/qutub.png" },
   { id: 3, title: "Albert Hall Meuseum", imgSrc: "./Images/alberthall.png" },
 ];
@@ -28,7 +28,7 @@ const Cardss = () => {
             />
             <Card.Body>
               <Card.Title>{card.title}</Card.Title>
-              <Button variant="primary">Go</Button>
+              <Button variant="primary" href={card.href}>Go</Button>
             </Card.Body>
           </Card>
         ))}

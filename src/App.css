@@ -1,55 +1,46 @@
-.navbarMain{
+.navbarMain {
   background-color: rgba(255, 174, 0, 0.719);
 }
 
-.modalbody{
+.modalbody label {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 20px;
   width: 100%;
+  padding: 0px 10px 0px 10px;
 }
 
-.modalbody input{
+.modalbody input {
   width: 100%;
   padding: 10px;
   border-radius: 50px;
 }
 
-.btnlog{
+.btnlog {
   display: flex;
   justify-content: center;
   flex-direction: column;
   width: 100%;
   padding: 20px;
 }
-
-.btnlog button{
+.Forget-Pass{
+  text-align: end;
+}
+.btnlog button {
   padding: 10px;
   border-radius: 50px;
   background-color: rgba(255, 174, 0, 0.719);
 }
 
-.checkbox{
-  margin-left: 20px;
-  color: blue;
-  display: flex;
-  justify-content: space-between;
-}
 
-.checkbox p {
+.Registerlink {
   display: flex;
-  justify-content: end;
-  align-items: end;
-}
-
-.Registerlink{
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.taj-img{
+.taj-img {
   height: 100vh;
   width: 100vw;
   object-fit: cover;
@@ -60,28 +51,23 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; 
-  gap: 20px; 
-  padding: 20px; 
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
   margin-top: 40px;
 }
 
-.cards2{
+.cards2 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; 
-  gap: 20px; 
-  padding: 20px; 
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
   margin-top: 40px;
-
 }
 
-.card-heading{
+.card-heading {
   margin-top: 30px;
   text-align: center;
 }
-
-
- 
- 
