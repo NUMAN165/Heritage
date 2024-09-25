@@ -6,6 +6,7 @@ const TajPage = () => {
     <div className='TajInfoPage'>
       <div className='imageContainer'>
         <img src="/images/taj1.png" alt="Taj Mahal" />
+        <div className='taj-table'>
         <table className='overlayTable'>
           <thead>
             <tr>
@@ -32,6 +33,7 @@ const TajPage = () => {
             </tr>
           </tbody>
         </table>
+        </div>
       </div>
     </div>
   );
