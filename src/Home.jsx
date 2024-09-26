@@ -1,14 +1,17 @@
-import React from 'react';
+
 import "./App.css"
+import Cardss from "./components/Cardss";
 
 
-
-const Home = () => {
+const Home = ()=> {
   return (
-    <div className='tajdiv'>
-      <img className='taj' src="taj.png" alt="taj" />
-    </div>
-  )
+    <>
+    <img className='taj-img' src="taj1.png" alt="taj" />
+    <h1 className='card-heading'>View Meuseums / Monuments</h1>
+    <Cardss />
+    </>
+  );
 }
-export default Home
+
+export default Home;
 
