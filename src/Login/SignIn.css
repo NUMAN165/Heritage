@@ -1,0 +1,22 @@
+
+.SignIn-Main{
+    display: flex;
+
+}
+
+.SignIn-FirstHalf{
+border: 2px solid red;
+width: 50%;
+height: 100vh;
+}
+
+.SignIn-SecondHalf {
+    border: 2px solid red;
+    width: 50%;
+    height: 100vh;
+}
+
+.SignIn-SecondHalf img {
+    height: 100vh;
+    width: 100%;
+}

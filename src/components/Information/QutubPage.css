@@ -1,0 +1,38 @@
+.QutubInfoPage img {
+    height: 100vh;
+    width: 100vw;
+    filter: blur(1px);
+  }
+  
+  .QutubInfoPage {
+    position: relative;
+  }
+  
+  .imageContainer {
+    position: relative;
+    text-align: center;
+  }
+  
+  .overlayTable {
+    position: absolute;
+    top: 20%; 
+    left: 50%;
+    height: 50%;
+    width: 70%;
+    transform: translateX(-50%); 
+    background-color: rgba(255, 255, 255, 0.3);  
+    border-collapse: collapse;
+    z-index: 1; 
+  }
+  
+  .overlayTable th,
+  .overlayTable td {
+    border: 1px solid rgba(0, 0, 0, 0.5); 
+    padding: 8px;
+    text-align: center; 
+    color: black; 
+  }
+  
+  .overlayTable th {
+    background-color: rgba(255, 255, 255, 0.5);
+  }

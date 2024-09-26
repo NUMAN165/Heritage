@@ -1,22 +1,22 @@
-.navbarMain{
+.navbarMain {
   background-color: rgba(255, 174, 0, 0.719);
 }
 
-.modalbody{
+.modalbody label {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 20px;
   width: 100%;
+  padding: 0px 10px 0px 10px;
 }
 
-.modalbody input{
+.modalbody input {
   width: 100%;
   padding: 10px;
   border-radius: 50px;
 }
 
-.btnlog{
+.btnlog {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -24,44 +24,79 @@
   padding: 20px;
 }
 
-.btnlog button{
+.Forget-Pass{
+  text-align: end;
+}
+
+.btnlog button {
   padding: 10px;
   border-radius: 50px;
   background-color: rgba(255, 174, 0, 0.719);
 }
 
-.checkbox{
-  margin-left: 20px;
-  color: blue;
-  display: flex;
-  justify-content: space-between;
-}
 
-.checkbox p {
+.Registerlink {
   display: flex;
-  justify-content: end;
-  align-items: end;
-}
-
-.Registerlink{
-  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.taj-img {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  overflow: hidden;
+}
 
-.tajdiv{
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(16,25,124,1) 40%, rgba(0,134,255,1) 91%);
- 
- }    
- 
- 
- .tajdiv img {
-  height: 50vh;
-  border-radius: 50px;
-  margin: 70px 70px 70px 70px;
- }
- 
- 
- 
+.cardss {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.cards2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.card-heading {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.glassbody {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://images.unsplash.com/photo-1587135941948-670b381f08ce?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRhaiUyMG1haGFsfGVufDB8fDB8fHww') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+h1, p {
+  color: white;
+  margin: 0;
+}
+
