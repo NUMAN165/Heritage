@@ -1,12 +1,12 @@
 import React from 'react';
-import './TajPage.css';
+import './QutubPage.css';
 
-const TajPage = () => {
+const QutubPage = () => {
   return (
-    <div className='TajInfoPage'>
+    <div className='QutubInfoPage'>
       <div className='imageContainer'>
-        <img src="/images/taj1.png" alt="Taj Mahal" />
-        <div className='taj-table'>
+        <img src="/images/qutub.png" alt="Qutub Minar" />
+        <div className='Qutub-table'>
         <table className='overlayTable'>
           <thead>
             <tr>
@@ -39,24 +39,4 @@ const TajPage = () => {
   );
 }
 
-export default TajPage;
-
-
-// GlassMorphism.js
-// import React from 'react';
-// import './TajPage.css';
-
-// const TajPage = () => {
-//     return (
-//       <>
-//         <div className='glassbodys'>
-//         <div className="glasss">
-//             <h1>Hello, World!</h1>
-//             <p>This is a glassmorphism effect!</p>
-//         </div>
-//         </div>
-//         </>
-//     );
-// };
-
-// export default TajPage;
+export default QutubPage;

@@ -5,7 +5,7 @@ import "../App.css";
 
 const cardData = [
   { id: 1, title: "Taj Mahal", imgSrc: "./Images/taj1.png",href:"/TajPage" },
-  { id: 2, title: "Qutub Minar", imgSrc: "./Images/qutub.png" },
+  { id: 2, title: "Qutub Minar", imgSrc: "./Images/qutub.png",href:"/QutubPage" },
   { id: 3, title: "Albert Hall Meuseum", imgSrc: "./Images/alberthall.png" },
 ];
 

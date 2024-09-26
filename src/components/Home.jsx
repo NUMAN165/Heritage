@@ -1,25 +1,35 @@
-
 import { Container, Navbar } from "react-bootstrap";
-import "../App.css"
+import "../App.css";
 import Cardss from "./Cardss";
 import { Link } from "react-router-dom";
-import SignIn from '../SignIn';
+// import SignIn from "../SignIn";
 
-const Home = ()=> {
+
+
+const Home = () => {
   return (
     <>
-        <Navbar expand="lg" className="navbarMain">
+      <Navbar expand="lg" className="navbarMain">
         <Container>
-          <Navbar.Brand as={Link} to="/" className='navbar'>Heritage Pass</Navbar.Brand>
-          <SignIn />                                                                    
-        </Container>                                                                                                                                  
+          <Navbar.Brand as={Link} to="/" className="navbar">
+            Heritage Pass
+          </Navbar.Brand>
+        </Container>
       </Navbar>
-    <img className='taj-img' src="./Images/taj1.png" alt="taj" />
-    <h1 className='card-heading'>View Meuseums / Monuments</h1>
-    <Cardss />
+      <div className="glassbody">
+        <div className="glass">
+          {/* <img className='taj-img' src="./Images/taj1.png" alt="taj" /> */}
+          <h1>Welcome!</h1>
+          <h4>To Heritage Pass </h4>
+          {/* <SignIn /> */}
+          <button href="/QutubPage">sign</button>
+          <p>Visit Meusems and Monuments</p>
+        </div>
+      </div>
+      <h1 className="card-heading">View Meuseums / Monuments</h1>
+      <Cardss />
     </>
   );
-}
+};
 
 export default Home;
-
