@@ -3,7 +3,6 @@
 }
 
 .SignIn-FirstHalf {
-  border: 2px solid red;
   width: 50%;
   height: 100vh;
   flex: 1;
@@ -15,7 +14,6 @@
 }
 
 .SignIn-SecondHalf {
-  border: 2px solid red;
   width: 50vw;
   height: 100vh;
 }

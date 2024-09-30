@@ -2,46 +2,6 @@
   background-color: rgba(255, 174, 0, 0.719);
 }
 
-.modalbody label {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  padding: 0px 10px 0px 10px;
-}
-
-.modalbody input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 50px;
-}
-
-.btnlog {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-  padding: 20px;
-}
-
-.Forget-Pass{
-  text-align: end;
-}
-
-.btnlog button {
-  padding: 10px;
-  border-radius: 50px;
-  background-color: rgba(255, 174, 0, 0.719);
-}
-
-
-.Registerlink {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 .taj-img {
   height: 100vh;
   width: 100vw;
@@ -80,7 +40,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('https://images.unsplash.com/photo-1587135941948-670b381f08ce?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRhaiUyMG1haGFsfGVufDB8fDB8fHww') no-repeat center center fixed;
+  background: url('https://images.unsplash.com/photo-1587135941948-670b381f08ce?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRhaiUyMG1haGFsfGVufDB8fDB8fHww') no-repeat center center ;
   background-size: cover;
 }
 
@@ -88,7 +48,7 @@
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 30px;
-  width: 300px;
+  width: 500px;
   text-align: center;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

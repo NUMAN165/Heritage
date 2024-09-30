@@ -15,11 +15,11 @@
 
 .overlayTable {
   position: absolute;
-  top: 20%; 
+  top: 20%;
   left: 50%;
   height: 50%;
   width: 70%;
-  transform: translateX(-50%); 
+  transform: translateX(-50%);
   background-color: rgba(255, 255, 255, 0.8);  
   border-collapse: collapse;
   z-index: 1;
@@ -29,8 +29,8 @@
 .overlayTable td {
   border: 1px solid rgba(0, 0, 0, 0.5); 
   padding: 8px;
-  text-align: center; 
-  color: black; 
+  text-align: center;
+  color: black;
 }
 
 .overlayTable th {
