@@ -1,6 +1,4 @@
-.navbarMain {
-  background-color: rgba(255, 174, 0, 0.719);
-}
+@import url("https://fonts.googleapis.com/css2?family=Updock&display=swap");
 
 .taj-img {
   height: 100vh;
@@ -34,29 +32,111 @@
   text-align: center;
 }
 
-.glassbody {
-  margin: 0;
-  height: 100vh;
+/* .glassbody {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url('https://images.unsplash.com/photo-1587135941948-670b381f08ce?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRhaiUyMG1haGFsfGVufDB8fDB8fHww') no-repeat center center ;
+  margin: 0;
+  height: 100vh;
+  background: url("https://images.unsplash.com/photo-1587135941948-670b381f08ce?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRhaiUyMG1haGFsfGVufDB8fDB8fHww")
+    no-repeat center center;
   background-size: cover;
+} */
+
+.glassbody {
+  position: relative; /* Make the parent a positioning context */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden; /* Prevent overflow of pseudo-element */
+}
+
+.glassbody::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1587135941948-670b381f08ce?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRhaiUyMG1haGFsfGVufDB8fDB8fHww")
+      no-repeat center center;
+  background-size: cover;
+  z-index: 1; /* Place it behind the text */
+}
+
+.glassbody > * {
+  position: relative; /* Bring text to the front */
+  z-index: 2; /* Ensure text is above the overlay */
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.1);
+  /* background: rgba(255, 255, 255, 0.1); */
+  height: 50vh;
   border-radius: 15px;
   padding: 30px;
   width: 500px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+  /* backdrop-filter: blur(0.1px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2); */
 }
 
-h1, p {
+.glass h1 {
+  font-weight: 800;
+  font-size: 5rem;
   color: white;
-  margin: 0;
+  font-family: "Updock", cursive;
+  font-style: normal;
 }
 
+.glass h4 {
+  font-weight: 800;
+  color: rgb(252, 218, 155);
+  margin-bottom: 60px;
+}
+
+.Sign-In {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.signin1 {
+  height: 75px;
+  width: 200px;
+  margin-right: 10px;
+  border-radius: 15px;
+  background-color: rgb(252, 218, 155);
+}
+
+.signin1 button {
+  background-color: rgb(252, 218, 155);
+  border: none;
+  height: 75px;
+  width: 200px;
+  border-radius: 15px;
+  font-size: 2rem;
+  color: white;
+}
+
+.signin2 {
+  height: 75px;
+  width: 200px;
+  background-color: white;
+  border-radius: 15px;
+}
+.signin2 button {
+  background-color: white;
+  border: none;
+  height: 75px;
+  width: 200px;
+  border-radius: 15px;
+  font-size: 2rem;
+  color: rgb(252, 218, 155);
+}
