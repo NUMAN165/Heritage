@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Updock&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
-.taj-img {
+.Home-img img {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   object-fit: cover;
   overflow: hidden;
 }
@@ -32,22 +33,11 @@
   text-align: center;
 }
 
-/* .glassbody {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-  height: 100vh;
-  background: url("https://images.unsplash.com/photo-1587135941948-670b381f08ce?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRhaiUyMG1haGFsfGVufDB8fDB8fHww")
-    no-repeat center center;
-  background-size: cover;
-} */
-
 .glassbody {
   position: relative; /* Make the parent a positioning context */
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   margin: 0;
   height: 100vh;
   overflow: hidden; /* Prevent overflow of pseudo-element */
@@ -64,7 +54,7 @@
     url("https://images.unsplash.com/photo-1587135941948-670b381f08ce?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRhaiUyMG1haGFsfGVufDB8fDB8fHww")
       no-repeat center center;
   background-size: cover;
-  z-index: 1; /* Place it behind the text */
+  z-index: 1;
 }
 
 .glassbody > * {
@@ -72,25 +62,32 @@
   z-index: 2; /* Ensure text is above the overlay */
 }
 
+.navbar h1 {
+  font-weight: 800;
+  color: white;
+  font-size: 3rem;
+  font-family: "Updock";
+  margin-left: 30px;
+}
+
 .glass {
   /* background: rgba(255, 255, 255, 0.1); */
   height: 50vh;
   border-radius: 15px;
   padding: 30px;
-  width: 500px;
+  width: 800px;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
-  /* backdrop-filter: blur(0.1px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2); */
+  margin-left: 25%;
+  margin-top: 20vh; 
 }
 
 .glass h1 {
   font-weight: 800;
-  font-size: 5rem;
+  font-size: 4rem;
   color: white;
   font-family: "Updock", cursive;
   font-style: normal;
@@ -98,6 +95,7 @@
 
 .glass h4 {
   font-weight: 800;
+  font-size: 3rem;
   color: rgb(252, 218, 155);
   margin-bottom: 60px;
 }

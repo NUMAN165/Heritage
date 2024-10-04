@@ -1,32 +1,42 @@
 import "../App.css";
 import Cardss from "./Cardss";
 import { Link } from "react-router-dom";
-// import SignIn from "../SignIn";
+import { CiLogin} from "react-icons/ci";
+import { FaUserFriends } from "react-icons/fa";
 
 const Home = () => {
   return (
     <>
       <div className="glassbody">
-        {/* <img src="Images/taj1.png" alt="" /> */}
+        {/* <img src="Images/taj1.png" alt="Tajj" /> */}
+        <div className="navbar">
+          <h1>Heritage Pass </h1>
+          {/* <button>Information</button> */}
+        </div>
         <div className="glass">
-          <h1>Heritage Pass</h1>
-          <h4>Book Tickets</h4>
+          <h1>Welcome to Meuseums and Monuments</h1>
+          <h4>Book Tickets </h4>
           <div className="Sign-In">
             <div className="signin1">
               <Link to="/SignIn">
-                <button>Sign Up</button>
+                <button>Sign Up <CiLogin /></button>
               </Link>
             </div>
             <div className="signin2">
-              <button>Register</button>
+            <Link to="/Register">
+            <button>Register <FaUserFriends /> </button>
+              </Link>
+              
             </div>
           </div>
         </div>
       </div>
       <h1 className="card-heading">View Meuseums / Monuments</h1>
       <Cardss />
+      {/* <ToggleImage  /> */}
     </>
   );
 };
 
 export default Home;
+
