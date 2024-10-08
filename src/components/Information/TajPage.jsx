@@ -7,32 +7,35 @@ const TajPage = () => {
       <div className='imageContainer'>
         <img src="/images/taj1.png" alt="Taj Mahal" />
         <div className='taj-table'>
-        <table className='overlayTable'>
-          <thead>
-            <tr>
-              <th>Column 1</th>
-              <th>Column 2</th>
-              <th>Column 3</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Row 1, Cell 1</td>
-              <td>Row 1, Cell 2</td>
-              <td>Row 1, Cell 3</td>
-            </tr>
-            <tr>
-              <td>Row 2, Cell 1</td>
-              <td>Row 2, Cell 2</td>
-              <td>Row 2, Cell 3</td>
-            </tr>
-            <tr>
-              <td>Row 3, Cell 1</td>
-              <td>Row 3, Cell 2</td>
-              <td>Row 3, Cell 3</td>
-            </tr>
-          </tbody>
-        </table>
+        <table  className='overlayTable'>
+            <tbody>
+              <tr>
+                <td width="25%"><b>Location</b></td>
+                <td>
+                  <p style={{ marginLeft: '2%' }}>Aurangabad, Maharashtra</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="25%"><b>Timings</b></td>
+                <td>
+                  <p style={{ marginLeft: '2%' }}>From 9:00 AM to 5:30 PM; closed on Monday</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="25%"><b>Entry Fees</b></td>
+                <td>
+                  <p style={{ marginLeft: '2%' }}>₹ 10 for Indians; ₹ 300 for foreigners; Weekend tickets will cost you ₹35 for Adults and ₹550 for Foreigners.</p>
+                </td>
+              </tr>
+              <tr>
+                <td width="25%"><b>Commissioned by</b></td>
+                <td>
+                  <p style={{ marginLeft: '2%' }}>Buddhist Monks between 200 B.C to 650 A.D under the patronage of Vakataka Kings</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
         </div>
       </div>
     </div>
@@ -60,3 +63,5 @@ export default TajPage;
 // };
 
 // export default TajPage;
+
+
