@@ -86,7 +86,7 @@
 }
 
 .glass h1 {
-  font-weight: 800;
+  font-weight: 600;
   font-size: 4rem;
   color: white;
   font-family: "Updock", cursive;
@@ -94,7 +94,7 @@
 }
 
 .glass h4 {
-  font-weight: 800;
+  font-weight: 400;
   font-size: 3rem;
   color: rgb(252, 218, 155);
   margin-bottom: 60px;
@@ -106,35 +106,42 @@
   justify-content: center;
 }
 .signin1 {
-  height: 75px;
-  width: 200px;
+  height: 5vh;
+  width: 7vw;
   margin-right: 10px;
   border-radius: 15px;
-  background-color: rgb(252, 218, 155);
+  background-color: #18206F
 }
 
 .signin1 button {
-  background-color: rgb(252, 218, 155);
+  background-color: #18206F;
   border: none;
-  height: 75px;
-  width: 200px;
+  height: 5vh;
+  width: 7vw;
   border-radius: 15px;
-  font-size: 2rem;
-  color: white;
+  font-size: 1.1rem;
+  font-weight: 700;
+    color: white;
 }
 
 .signin2 {
-  height: 75px;
-  width: 200px;
-  background-color: white;
+  height: 5vh;
+  width: 7vw;
   border-radius: 15px;
+  margin-right: 20px;
+
 }
 .signin2 button {
-  background-color: white;
+  background-color: rgb(252, 218, 155);
   border: none;
-  height: 75px;
-  width: 200px;
+  height: 5vh;
+  width: 7vw;
   border-radius: 15px;
-  font-size: 2rem;
-  color: rgb(252, 218, 155);
-}
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  margin-right: 20px;
+}         
+
+
+

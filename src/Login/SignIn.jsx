@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 import './SignIn.css';
 
 const SignIn = () => {
@@ -6,7 +7,7 @@ const SignIn = () => {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     setError(''); // Reset error message
 
@@ -30,21 +31,35 @@ const SignIn = () => {
       return;
     }
 
+    const finalUser = {
+      email: email,
+      password:password
+    }
+
     // Log the input values
     console.log('Email:', email);
     console.log('Password:', password);
 
-    // Simulate successful login
-    alert('Login successful!');
+    try {
+      const response = await axios.post('http://localhost:5000/api/login', finalUser)
+      if(response){        
+        alert(response?.data?.message)
+      }
+    } catch (error) {
+      console.log();
+      
+      alert(error, 'error')
+    }
 
-    // Reset the form
-    setEmail('');
-    setPassword('');
+    // // Reset the form
+    // setEmail('');
+    // setPassword('');
   };
 
   return (
     <div className='SignIn-Main'>
       <div className='SignIn-FirstHalf'>
+        <div className='numan'>
         <h3>Welcome Back!</h3>
         <h6>Sign In For Heritage-Pass</h6>
         <form className='SignIn-Form' onSubmit={handleSubmit}>
@@ -78,6 +93,7 @@ const SignIn = () => {
 
           <button type='submit'>Login</button>
         </form>
+        </div>
       </div>
       <div className='SignIn-SecondHalf'>
         <img src="/Images/MysorePalace2.png" alt="Mysore Palace" />

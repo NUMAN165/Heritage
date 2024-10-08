@@ -3,16 +3,16 @@ import axios from 'axios';
 
 const Register = () => {
   // State to hold form data
-  const [formData, setFormData] = useState({
+  const [userData, setUserData] = useState({
     username: '',
     email: '',
     password: '',
-  });
+  });   
 
   // Handle input change
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
+    setUserData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
@@ -22,14 +22,14 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3002/api/register', formData);
+      const response = await axios.post('http://localhost:5000/api/register', userData);
       console.log(response.data);
       alert('Registration successful!');
       // Reset the form
-      setFormData({ username: '', email: '', password: '' });
+      setUserData({ username: '', email: '', password: '' });
     } catch (error) {
       console.error('There was an error!', error);
-      alert('Registration failed. Please try again.');
+      alert("Registration Failed ,Please try Again");
     }
   };
 
@@ -43,7 +43,7 @@ const Register = () => {
             <input
               type="text"
               name="username"
-              value={formData.username}
+              value={userData.username}
               onChange={handleChange}
               required
               style={{ width: '100%', padding: '8px', marginTop: '5px' }}
@@ -56,7 +56,7 @@ const Register = () => {
             <input
               type="email"
               name="email"
-              value={formData.email}
+              value={userData.email}
               onChange={handleChange}
               required
               style={{ width: '100%', padding: '8px', marginTop: '5px' }}
@@ -69,7 +69,7 @@ const Register = () => {
             <input
               type="password"
               name="password"
-              value={formData.password}
+              value={userData.password}
               onChange={handleChange}
               required
               style={{ width: '100%', padding: '8px', marginTop: '5px' }}
@@ -85,3 +85,4 @@ const Register = () => {
 };
 
 export default Register;
+

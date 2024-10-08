@@ -11,11 +11,6 @@ const Home = () => {
         {/* <img src="Images/taj1.png" alt="Tajj" /> */}
         <div className="navbar">
           <h1>Heritage Pass </h1>
-          {/* <button>Information</button> */}
-        </div>
-        <div className="glass">
-          <h1>Welcome to Meuseums and Monuments</h1>
-          <h4>Book Tickets </h4>
           <div className="Sign-In">
             <div className="signin1">
               <Link to="/SignIn">
@@ -26,9 +21,13 @@ const Home = () => {
             <Link to="/Register">
             <button>Register <FaUserFriends /> </button>
               </Link>
-              
             </div>
           </div>
+          {/* <button>Information</button> */}
+        </div>
+        <div className="glass">
+          <h1>Welcome to Meuseums and Monuments</h1>
+          <h4>Book Tickets </h4>
         </div>
       </div>
       <h1 className="card-heading">View Meuseums / Monuments</h1>
