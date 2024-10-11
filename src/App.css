@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Updock&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 
 .Home-img img {
   height: 100vh;
@@ -75,27 +75,27 @@
   height: 50vh;
   border-radius: 15px;
   padding: 30px;
-  width: 800px;
+  width: 700px;
   display: flex;
   flex-direction: column;
   text-align: center;
   justify-content: center;
   align-items: center;
   margin-left: 25%;
-  margin-top: 20vh; 
+  margin-top: 20vh;
+  border:2px solid red;
 }
 
 .glass h1 {
-  font-weight: 600;
-  font-size: 4rem;
+  font-weight: 400;
+  font-size: 3rem;
   color: white;
-  font-family: "Updock", cursive;
   font-style: normal;
 }
 
 .glass h4 {
-  font-weight: 400;
-  font-size: 3rem;
+  font-weight: 300;
+  font-size: 2rem;
   color: rgb(252, 218, 155);
   margin-bottom: 60px;
 }
@@ -107,41 +107,37 @@
 }
 .signin1 {
   height: 5vh;
-  width: 7vw;
+  min-width: 8vw;
   margin-right: 10px;
   border-radius: 15px;
-  background-color: #18206F
+  background-color: #18206f;
 }
 
 .signin1 button {
-  background-color: #18206F;
+  background-color: #18206f;
   border: none;
   height: 5vh;
-  width: 7vw;
+  min-width: 8vw;
   border-radius: 15px;
   font-size: 1.1rem;
   font-weight: 700;
-    color: white;
+  color: white;
 }
 
 .signin2 {
   height: 5vh;
-  width: 7vw;
+  min-width: 8vw;
   border-radius: 15px;
   margin-right: 20px;
-
 }
 .signin2 button {
   background-color: rgb(252, 218, 155);
   border: none;
   height: 5vh;
-  width: 7vw;
+  min-width: 8vw;
   border-radius: 15px;
   font-size: 1.1rem;
   font-weight: 700;
   color: white;
   margin-right: 20px;
-}         
-
-
-
+}

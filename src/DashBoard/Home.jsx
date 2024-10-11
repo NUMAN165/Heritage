@@ -1,8 +1,9 @@
 import "../App.css";
 import Cardss from "./Cardss";
 import { Link } from "react-router-dom";
-import { CiLogin} from "react-icons/ci";
+import { CiLogin } from "react-icons/ci";
 import { FaUserFriends } from "react-icons/fa";
+import SearchBar from "./SearchBar";
 
 const Home = () => {
   return (
@@ -14,19 +15,24 @@ const Home = () => {
           <div className="Sign-In">
             <div className="signin1">
               <Link to="/SignIn">
-                <button>Sign Up <CiLogin /></button>
+                <button>
+                  Sign Up <CiLogin />
+                </button>
               </Link>
             </div>
             <div className="signin2">
-            <Link to="/Register">
-            <button>Register <FaUserFriends /> </button>
+              <Link to="/Register">
+                <button>
+                  Register <FaUserFriends />{" "}
+                </button>
               </Link>
             </div>
+            <SearchBar/>
           </div>
           {/* <button>Information</button> */}
         </div>
         <div className="glass">
-          <h1>Welcome to Meuseums and Monuments</h1>
+          <h1>Reserve Your Adventure!</h1>
           <h4>Book Tickets </h4>
         </div>
       </div>
@@ -38,4 +44,3 @@ const Home = () => {
 };
 
 export default Home;
-
