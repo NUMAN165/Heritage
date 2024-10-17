@@ -9,7 +9,7 @@ const SignIn = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setError(''); // Reset error message
+    setError(''); // Reset error messagez
 
     // Basic validation
     if (!email || !password) {

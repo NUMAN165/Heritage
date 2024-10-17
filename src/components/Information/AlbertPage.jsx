@@ -9,45 +9,15 @@ const AlbertPage = () => {
         <div className="Albert-table">
           <table className="overlayTable-Albert">
             <tbody>
-              <tr>
-                <td width="25%">
-                  <b>Location</b>
-                </td>
-                <td>
-                  <p style={{ marginLeft: "2%" }}>Agra, Delhi</p>
-                </td>
+              <tr className="none">
+                <td>Location</td>
+                <td>Delhi India</td>
+                {/* <td>Row 1, Cell 3</td> */}
               </tr>
               <tr>
-                <td width="25%">
-                  <b>Timings</b>
-                </td>
-                <td>
-                  <p style={{ marginLeft: "2%" }}>
-                    From 9:00 AM to 5:30 PM; closed on Fridays
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td width="25%">
-                  <b>Entry Fees</b>
-                </td>
-                <td>
-                  <p style={{ marginLeft: "2%" }}>
-                    ₹ 50 for Indians Children under 15 years are free; ₹ 1100
-                    for foreigners;
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td width="25%">
-                  <b>Commissioned by</b>
-                </td>
-                <td>
-                  <p style={{ marginLeft: "2%" }}>
-                    Taj Mahal was commissioned by Mughal Emperor Shah Jahan in
-                    memory of his beloved wife, Mumtaz Mahal.
-                  </p>
-                </td>
+                <td>Row 2, Cell 1</td>
+                <td>Row 2, Cell 2</td> 
+                <td>Row 2, Cell 3</td>
               </tr>
             </tbody>
           </table>
