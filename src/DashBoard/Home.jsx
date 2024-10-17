@@ -3,7 +3,7 @@ import Cardss from "./Cardss";
 import { Link } from "react-router-dom";
 import { CiLogin } from "react-icons/ci";
 import { FaUserFriends } from "react-icons/fa";
-import SearchBar from "./SearchBar";
+// import SearchBar from "./SearchBar";
 
 const Home = () => {
   return (
@@ -23,11 +23,10 @@ const Home = () => {
             <div className="signin2">
               <Link to="/Register">
                 <button>
-                  Register <FaUserFriends />{" "}
+                  Register <FaUserFriends />
                 </button>
               </Link>
             </div>
-            <SearchBar/>
           </div>
           {/* <button>Information</button> */}
         </div>

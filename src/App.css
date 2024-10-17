@@ -71,7 +71,7 @@
 }
 
 .glass {
-  /* background: rgba(255, 255, 255, 0.1); */
+  /* background: rgba(255, 255, 255, 0.4); */
   height: 50vh;
   border-radius: 15px;
   padding: 30px;
@@ -83,7 +83,7 @@
   align-items: center;
   margin-left: 25%;
   margin-top: 20vh;
-  border:2px solid red;
+  border: 2px solid red;
 }
 
 .glass h1 {
