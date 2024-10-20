@@ -1,6 +1,77 @@
+.Register-img {
+  position: relative;
+}
+
 .Register-img img {
-  height: 100vh;
-  width: 100%;
-  object-fit: cover;
-  overflow: hidden;
+  width: 100vw; /* Ensure the image is responsive */
+  height: 100vh; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the entire area */
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  width: 450px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.15); 
+  border-radius: 15px;
+  backdrop-filter: blur(15px); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);  
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%; /* Increased margin for better spacing */
+}
+
+
+.input-field { 
+  display: flex;
+  width: 25vw;
+  padding: 10px; 
+  margin-top: 5px;
+  border: none; 
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2); 
+  backdrop-filter: blur(10px); 
+  color: white; 
+  font-size: 16px; 
+  transition: background 0.3s, border 0.3s;  
+} 
+
+.input-field:focus {
+  background: rgba(255, 255, 255, 0.3); /* Slightly more opaque when focused */
+  outline: none; /* Remove outline */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Light border on focus */
+}
+
+.input-field::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Placeholder color */
+}
+
+.submit-button {
+  padding: 12px 20px;
+  font-size: 16px;
+  background: linear-gradient(90deg, #4CAF50, #45a049); 
+  color: white;
+  border: none;
+  border-radius: 10px; 
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s; 
+  width: 40%;
+  margin-left: 130px;
+}
+
+.submit-button:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 15px;
+  font-weight: bold; /* Bold error messages */
+  text-align: center; /* Center error messages */
 }

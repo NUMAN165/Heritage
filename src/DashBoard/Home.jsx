@@ -3,13 +3,11 @@ import Cardss from "./Cardss";
 import { Link } from "react-router-dom";
 import { CiLogin } from "react-icons/ci";
 import { FaUserFriends } from "react-icons/fa";
-import SearchBar from "./SearchBar";
 
 const Home = () => {
   return (
     <>
       <div className="glassbody">
-        {/* <img src="Images/taj1.png" alt="Tajj" /> */}
         <div className="navbar">
           <h1>Heritage Pass </h1>
           <div className="Sign-In">
@@ -27,18 +25,16 @@ const Home = () => {
                 </button>
               </Link>
             </div>
-            <SearchBar/>
           </div>
-          {/* <button>Information</button> */}
         </div>
         <div className="glass">
           <h1>Reserve Your Adventure!</h1>
-          <h4>Book Tickets </h4>
+          <h4>Culture Awaits</h4>
+          <button className="ticket">Book Tickets</button>
         </div>
       </div>
       <h1 className="card-heading">View Meuseums / Monuments</h1>
       <Cardss />
-      {/* <ToggleImage  /> */}
     </>
   );
 };

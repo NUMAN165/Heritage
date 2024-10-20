@@ -83,7 +83,6 @@
   align-items: center;
   margin-left: 25%;
   margin-top: 20vh;
-  border: 2px solid red;
 }
 
 .glass h1 {
@@ -97,7 +96,25 @@
   font-weight: 300;
   font-size: 2rem;
   color: rgb(252, 218, 155);
-  margin-bottom: 60px;
+}
+
+.ticket {
+  background-color: #18206f; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+.ticket:hover {
+  background-color: #090b18; /* Darker green */
+  transform: scale(1.05); /* Slightly enlarge the button */
 }
 
 .Sign-In {
