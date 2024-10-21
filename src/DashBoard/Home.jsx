@@ -21,7 +21,7 @@ const Home = () => {
             <div className="signin2">
               <Link to="/Register">
                 <button>
-                  Register <FaUserFriends />{" "}
+                  Register <FaUserFriends />
                 </button>
               </Link>
             </div>

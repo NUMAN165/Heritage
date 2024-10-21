@@ -57,49 +57,51 @@ const SignIn = () => {
   };
 
   return (
-    <div className='SignIn-Main'>
-      <div className='SignIn-FirstHalf'>
-        <div className='numan'>
-        <h3>Welcome Back!</h3>
-        <h6>Sign In For Heritage-Pass</h6>
-        <form className='SignIn-Form' onSubmit={handleSubmit}>
-          <label htmlFor='username'>Email:</label>
-          <input
-            type='text'
-            id='username'
-            name='username'
-            required
-            placeholder='Enter Your Email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          
-          {error && <div className="error-message">{error}</div>}
 
-          <label htmlFor='password'>Password:</label>
-          <input
-            type='password'
-            id='password'
-            name='password'
-            required
-            placeholder='Enter Your Password'
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-
-          <div className='Forgot-Password'>
-            <a href='/forgot-password'>Forgot Password?</a>
+      <div className='SignIn-Main'>
+        <div className='SignIn-Image'>
+          <img src="/Images/MysorePalace2.png" alt="Mysore Palace" />
+          <div className='SignIn-Overlay'>
+            <h3>Welcome Back!</h3>
+            <h6>Sign In For Heritage-Pass</h6>
+            <form className='SignIn-Form' onSubmit={handleSubmit}>
+              <label htmlFor='username'>Email:</label>
+              <input
+                type='text'
+                id='username'
+                name='username'
+                required
+                placeholder='Enter Your Email'
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+              
+              {error && <div className="error-message">{error}</div>}
+    
+              <label htmlFor='password'>Password:</label>
+              <input
+                type='password'
+                id='password'
+                name='password'
+                required
+                placeholder='Enter Your Password'
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+    
+              <div className='Forgot-Password'>
+                <a href='/forgot-password'>Forgot Password?</a>
+              </div>
+    
+              <button type='submit'>Login</button>
+            </form>
+            <div className='Google-SignIn'>
+          <button className='Google-Button'>Sign Up with Google</button>
+        </div>
           </div>
-
-          <button type='submit'>Login</button>
-        </form>
         </div>
       </div>
-      <div className='SignIn-SecondHalf'>
-        <img src="/Images/MysorePalace2.png" alt="Mysore Palace" />
-      </div>
-    </div>
-  );
+    );
 }
 
 export default SignIn;

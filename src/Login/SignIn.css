@@ -1,33 +1,39 @@
 .SignIn-Main {
-  display: flex;
+  position: relative;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Prevents overflow */
 }
 
-.SignIn-FirstHalf {
-  height: 100vh;
-  flex: 1;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; /* Align items to the start */
-  border: 2px solid red;
-
-}
-
-
-
-.SignIn-SecondHalf {
-  width: 50vw;
-  height: 100vh;
-}
-
-.SignIn-SecondHalf img {
-  height: 100vh;
+.SignIn-Image {
+  position: relative;
   width: 100%;
+  height: 100%;
+}
+
+.SignIn-Image img {
+  width: 100%;
+  height: 100%;
+  filter: blur(5px);
+  border: none;
+  object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+.SignIn-Overlay {
+  position: absolute;
+  width: 500px;
+  height: 55vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the overlay */
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Blur effect for the glassmorphism */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Space around the form */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Shadow for better visibility */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: Light border */
 }
 
 .SignIn-Form {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
 }
@@ -41,8 +47,10 @@
   margin-bottom: 15px;
   padding: 10px;
   width: 100%;
-  max-width: 300px; /* Adjust as needed */
+  max-width: 600px; /* Adjust as needed */
   border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Light border on inputs */
+  background: rgba(255, 255, 255, 0.5); /* Slightly transparent background for inputs */
 }
 
 .SignIn-Form button {
@@ -50,22 +58,48 @@
   cursor: pointer;
   border-radius: 10px;
   background-color: rgb(145, 70, 145);
-  /* width: 500px; */
-
 }
 
-.Forgot-Password{
-    text-align: end;
-    margin-top: none;
+.Forgot-Password {
+  text-align: end;
+}
+
+.Forgot-Password a {
+  text-decoration: none;
+  color: #007BFF; /* Bootstrap primary color */
+}
+
+.Forgot-Password a:hover {
+  text-decoration: underline;
+}
+
+.error-message {
+  color: red; /* Style for error message */
 }
 
 
-  .Forgot-Password a {
-    text-decoration: none;
-    color: #007BFF; /* Bootstrap primary color */
-  }
-  
-  .Forgot-Password a:hover {
-    text-decoration: underline;
-  }
-  
+.Google-SignIn {
+  margin-top: 20px; /* Space above the Google button */
+}
+
+.Google-Button {
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #db4437; /* Google Red */
+  color: white; /* Text color */
+  border: none; /* Remove default border */
+  width: 100%; /* Full width */
+  max-width: 300px; /* Adjust as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Google-Button:hover {
+  background-color: #c1351d; /* Darker red on hover */
+}
+
+.Google-Button:focus {
+  outline: none; /* Remove focus outline */
+}
