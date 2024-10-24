@@ -9,25 +9,27 @@ const SignIn = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setError(''); // Reset error messagez
+    setError(''); 
 
     // Basic validation
     if (!email || !password) {
-      setError('Please fill in all fields.');
+      alert('Please fill in all fields.');
       return;
     }
+
+
 
     // Email validation
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const hasNumber = /\d/;
 
     if (!emailPattern.test(email)) {
-      setError('Please enter a valid email address.');
+      alert('Please enter a valid email address.');
       return;
     }
 
     if (!hasNumber.test(email)) {
-      setError('Email must contain at least one number.');
+      alert('Email must contain at least one number.');
       return;
     }
 
@@ -35,6 +37,14 @@ const SignIn = () => {
       email: email,
       password:password
     }
+
+    // Password Validation
+
+  const isWeakPassword = password.length <= 8;
+
+if (isWeakPassword) {
+  setError("Password is too weak");
+}
 
     // Log the input values
     console.log('Email:', email);
@@ -95,9 +105,7 @@ const SignIn = () => {
     
               <button type='submit'>Login</button>
             </form>
-            <div className='Google-SignIn'>
-          <button className='Google-Button'>Sign Up with Google</button>
-        </div>
+            
           </div>
         </div>
       </div>
