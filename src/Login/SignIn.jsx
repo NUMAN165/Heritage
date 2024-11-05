@@ -33,18 +33,12 @@ const SignIn = () => {
       return;
     }
 
+
     const finalUser = {
       email: email,
       password:password
     }
 
-    // Password Validation
-
-  const isWeakPassword = password.length <= 8;
-
-if (isWeakPassword) {
-  setError("Password is too weak");
-}
 
     // Log the input values
     console.log('Email:', email);
