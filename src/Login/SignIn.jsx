@@ -17,8 +17,6 @@ const SignIn = () => {
       return;
     }
 
-
-
     // Email validation
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const hasNumber = /\d/;
@@ -40,7 +38,7 @@ const SignIn = () => {
     }
 
 
-    // Log the input values
+    // Log the input values 
     console.log('Email:', email);
     console.log('Password:', password);
 
@@ -55,9 +53,9 @@ const SignIn = () => {
       alert(error, 'error')
     }
 
-    // // Reset the form
-    // setEmail('');
-    // setPassword('');
+    // Reset the form
+    setEmail('');
+    setPassword('');
   };
 
   return (

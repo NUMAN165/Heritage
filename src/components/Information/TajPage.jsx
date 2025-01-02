@@ -59,21 +59,4 @@ const TajPage = () => {
 
 export default TajPage;
 
-// GlassMorphism.js
-// import React from 'react';
-// import './TajPage.css';
 
-// const TajPage = () => {
-//     return (
-//       <>
-//         <div className='glassbodys'>
-//         <div className="glasss">
-//             <h1>Hello, World!</h1>
-//             <p>This is a glassmorphism effect!</p>
-//         </div>
-//         </div>
-//         </>
-//     );
-// };
-
-// export default TajPage;

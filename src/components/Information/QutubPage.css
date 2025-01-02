@@ -36,3 +36,23 @@
   .overlayTable th {
     background-color: rgba(255, 255, 255, 0.5);
   }
+
+
+  .redBox {
+    position: absolute;
+    top: 20px; 
+    left: 50%; 
+    border: 2px solid red;
+    width: 50%; /* Set the width as needed */
+    height: 40%; /* Set the height as needed */
+  }
+  
+  .blackBox {
+    position: absolute;
+    bottom: 170px;
+    left: 45%; /* Adjust the position as needed */
+    border: 2px solid black;
+    width: 530px; /* Set the width as needed */
+    height: 20px; /* Set the height as needed */
+  }
+  
