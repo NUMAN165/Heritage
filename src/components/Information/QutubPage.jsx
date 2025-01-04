@@ -2,59 +2,37 @@ import React from 'react';
 import './QutubPage.css';
 
 const QutubPage = () => {
+  // Configurable table data
+  const tableData = [
+    { label: 'Location', value: 'New City, New Country' },
+    { label: 'Timings', value: 'From 10:00 AM to 6:00 PM; closed on Mondays' },
+    { label: 'Entry Fees', value: '₹ 100 for locals; ₹ 1200 for international visitors;' },
+    { label: 'Historical Significance', value: 'The monument was built in the 12th century by a famous king as a symbol of peace and unity.' }
+  ];
+
   return (
-    <div className='QutubInfoPage'>
+    <div className='TajInfoPage'>
       <div className='imageContainer'>
-        <img src="/images/qutub.png" alt="Qutub Minar" />
-        {/* <div className="redBox"> */}
+        <img src="/images/taj1.png" alt="New Landmark" />
+        
         <table className="overlayTable">
-            <tbody>
-              <tr>
+          <tbody>
+            {tableData.map((row, index) => (
+              <tr key={index}>
                 <td width="25%">
-                  <b>Location</b>
+                  <b>{row.label}</b>
                 </td>
                 <td>
-                  <p style={{ marginLeft: "2%" }}>Agra, Delhi</p>
+                  <p style={{ marginLeft: "2%" }}>{row.value}</p>
                 </td>
               </tr>
-              <tr>
-                <td width="25%">
-                  <b>Timings</b>
-                </td>
-                <td>
-                  <p style={{ marginLeft: "2%" }}>
-                    From 9:00 AM to 5:30 PM; closed on Fridays
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td width="25%">
-                  <b>Entry Fees</b>
-                </td>
-                <td>
-                  <p style={{ marginLeft: "2%" }}>
-                    ₹ 50 for Indians Children under 15 years are free; ₹ 1100
-                    for foreigners;
-                  </p>
-                </td>
-              </tr>
-              <tr>
-                <td width="25%">
-                  <b>Commissioned by</b>
-                </td>
-                <td>
-                  <p style={{ marginLeft: "2%" }}>
-                    Taj Mahal was commissioned by Mughal Emperor Shah Jahan in
-                    memory of his beloved wife, Mumtaz Mahal.
-                  </p>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        {/* </div> */}
+            ))}
+          </tbody>
+        </table>
+
         <div className="blackBox">
-          <button>Home</button>
-          <button>Sign Up</button>
+          <button>Explore More</button>
+          <button>Contact Us</button>
         </div>
       </div>
     </div>

@@ -1,26 +1,38 @@
-import React from "react";
-import "./AlbertPage.css";
+import React from 'react';
+import './QutubPage.css';
 
 const AlbertPage = () => {
+  // Configurable table data
+  const tableData = [
+    { label: 'Location', value: 'New City, New Country' },
+    { label: 'Timings', value: 'From 10:00 AM to 6:00 PM; closed on Mondays' },
+    { label: 'Entry Fees', value: '₹ 100 for locals; ₹ 1200 for international visitors;' },
+    { label: 'Historical Significance', value: 'The monument was built in the 12th century by a famous king as a symbol of peace and unity.' }
+  ];
+
   return (
-    <div className="AlbertInfoPage">
-      <div className="imageContainer">
-        <img src="/Images/alberthall.png" alt="Albert Hall" />
-        <div className="Albert-table">
-          <table className="overlayTable-Albert">
-            <tbody>
-              <tr className="none">
-                <td>Location</td>
-                <td>Delhi India</td>
-                {/* <td>Row 1, Cell 3</td> */}
+    <div className='TajInfoPage'>
+      <div className='imageContainer'>
+        <img src="/images/taj1.png" alt="New Landmark" />
+        
+        <table className="overlayTable">
+          <tbody>
+            {tableData.map((row, index) => (
+              <tr key={index}>
+                <td width="25%">
+                  <b>{row.label}</b>
+                </td>
+                <td>
+                  <p style={{ marginLeft: "2%" }}>{row.value}</p>
+                </td>
               </tr>
-              <tr>
-                <td>Row 2, Cell 1</td>
-                <td>Row 2, Cell 2</td> 
-                <td>Row 2, Cell 3</td>
-              </tr>
-            </tbody>
-          </table>
+            ))}
+          </tbody>
+        </table>
+
+        <div className="blackBox">
+          <button>Explore More</button>
+          <button>Contact Us</button>
         </div>
       </div>
     </div>
