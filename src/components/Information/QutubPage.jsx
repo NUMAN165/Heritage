@@ -1,5 +1,5 @@
 import React from 'react';
-import './QutubPage.css';
+import './Cards.css';
 
 const QutubPage = () => {
   // Configurable table data

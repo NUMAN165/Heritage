@@ -8,6 +8,9 @@ import QutubPage from "./components/Information/QutubPage";
 import AlbertPage from "./components/Information/AlbertPage";
 import SignIn from "./Login/SignIn";
 import Register from "./Login/Register";
+import HumayunsPage from "./components/Information/HumayunsPage";
+import PatnaPage from "./components/Information/PatnaPage";
+import AjantaPage from "./components/Information/AjantaPage";
 
 
 function App() {
@@ -21,6 +24,9 @@ function App() {
       <Route path='/Register' element={<Register></Register>}></Route>
       <Route path='/QutubPage' element={<QutubPage></QutubPage>}></Route>
       <Route path='/AlbertPage' element={<AlbertPage></AlbertPage>}></Route>
+      <Route path='/HumayunsPage' element={<HumayunsPage></HumayunsPage>}></Route>
+      <Route path='/PatnaPage' element={<PatnaPage></PatnaPage>}></Route>
+      <Route path='/AjantaPage' element={<AjantaPage></AjantaPage>}></Route>
 
 
     </Routes>

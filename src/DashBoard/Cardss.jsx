@@ -10,9 +10,9 @@ const cardData = [
 ];
 
 const cardData2 = [
-  { id: 4, title: "Humayuns Tomb", imgSrc: "./Images/humayans.png" },
-  { id: 5, title: "Ajanta Caves", imgSrc: "./Images/Ajanta.png" },
-  { id: 6, title: "Patna Meusems", imgSrc: "./Images/Patna.png" },
+  { id: 4, title: "Humayuns Tomb", imgSrc: "./Images/humayans.png",href:"/HumayunsPage" },
+  { id: 5, title: "Ajanta Caves", imgSrc: "./Images/Ajanta.png",href:"/AjantaPage" },
+  { id: 6, title: "Patna Meusems", imgSrc: "./Images/Patna.png",href:"/PatnaPage" },
 ];
 
 const Cardss = () => {
@@ -44,7 +44,7 @@ const Cardss = () => {
             />
             <Card.Body>
               <Card.Title>{card.title}</Card.Title>
-              <Button variant="primary">Go</Button>
+              <Button variant="primary" href={card.href}>Go</Button>
             </Card.Body>
           </Card>
         ))}

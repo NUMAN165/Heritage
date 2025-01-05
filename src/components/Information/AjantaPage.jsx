@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cards.css';
 
-const AlbertPage = () => {
+const AjantaPage = () => {
   // Configurable table data
   const tableData = [
     { label: 'Location', value: 'New City, New Country' },
@@ -31,12 +31,12 @@ const AlbertPage = () => {
         </table>
 
         <div className="blackBox">
-          <button>Explore More</button>
-          <button>Contact Us</button>
+          <button>Home</button>
+          <button>Book Tickets</button>
         </div>
       </div>
     </div>
   );
 };
 
-export default AlbertPage;
+export default AjantaPage;
