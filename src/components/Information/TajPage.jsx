@@ -31,8 +31,8 @@ const TajPage = () => {
         </table>
 
         <div className="blackBox">
-          <button>Explore More</button>
-          <button>Contact Us</button>
+          <button>Home</button>
+          <button>Book Tickets</button>
         </div>
       </div>
     </div>
