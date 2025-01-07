@@ -13,7 +13,7 @@ const AjantaPage = () => {
   return (
     <div className='TajInfoPage'>
       <div className='imageContainer'>
-        <img src="/images/taj1.png" alt="New Landmark" />
+        <img src="./Images/Ajanta.png" alt="New Landmark" />
         
         <table className="overlayTable">
           <tbody>
