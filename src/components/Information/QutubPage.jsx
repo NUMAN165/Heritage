@@ -1,20 +1,27 @@
-import React from 'react';
-import './Cards.css';
+import React from "react";
+import "./Cards.css";
 
 const QutubPage = () => {
   // Configurable table data
   const tableData = [
-    { label: 'Location', value: 'New City, New Country' },
-    { label: 'Timings', value: 'From 10:00 AM to 6:00 PM; closed on Mondays' },
-    { label: 'Entry Fees', value: '₹ 100 for locals; ₹ 1200 for international visitors;' },
-    { label: 'Historical Significance', value: 'The monument was built in the 12th century by a famous king as a symbol of peace and unity.' }
+    { label: "Location", value: "Delhi, India" },
+    { label: "Timings", value: "From 10:00 AM to 6:00 PM; closed on Mondays" },
+    {
+      label: "Entry Fees",
+      value: "₹ 100 for locals; ₹ 1200 for international visitors;",
+    },
+    {
+      label: "Historical Significance",
+      value:
+        "The monument was built in the 12th century by a famous king as a symbol of peace and unity.",
+    },
   ];
 
   return (
-    <div className='TajInfoPage'>
-      <div className='imageContainer'>
+    <div className="TajInfoPage">
+      <div className="imageContainer">
         <img src="/images/taj1.png" alt="New Landmark" />
-        
+
         <table className="overlayTable">
           <tbody>
             {tableData.map((row, index) => (
