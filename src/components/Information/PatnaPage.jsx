@@ -18,7 +18,7 @@ const PatnaPage = () => {
   ];
 
   return (
-    <div className="TajInfoPage">
+    <div className="InfoPage">
       <div className="imageContainer">
         <img src="/images/taj1.png" alt="New Landmark" />
 

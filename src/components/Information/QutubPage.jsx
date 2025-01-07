@@ -18,7 +18,7 @@ const QutubPage = () => {
   ];
 
   return (
-    <div className="TajInfoPage">
+    <div className="InfoPage">
       <div className="imageContainer">
         <img src="/images/taj1.png" alt="New Landmark" />
 
@@ -38,8 +38,8 @@ const QutubPage = () => {
         </table>
 
         <div className="blackBox">
-          <button>Explore More</button>
-          <button>Contact Us</button>
+          <button>Home</button>
+          <button>Book Tickets</button>
         </div>
       </div>
     </div>
