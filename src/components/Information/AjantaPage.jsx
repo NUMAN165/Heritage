@@ -46,4 +46,6 @@ const AjantaPage = () => {
   );
 };
 
+
+
 export default AjantaPage;
