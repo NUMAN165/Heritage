@@ -8,12 +8,12 @@ const AjantaPage = () => {
     { label: "Timings", value: "From 10:00 AM to 6:00 PM; closed on Mondays" },
     {
       label: "Entry Fees",
-      value: "₹ 100 for locals; ₹ 1200 for international visitors;",
+      value: "₹ 40 for locals; ₹ 600 for international visitors;",
     },
     {
       label: "Historical Significance",
       value:
-        "The monument was built in the 12th century by a famous king as a symbol of peace and unity.",
+        "The Ajanta Caves, located in Maharashtra, are a series of 30 rock-cut Buddhist cave monuments dating from the 2nd century BCE to about 480 CE. They are renowned for their exquisite murals and sculptures, which are considered masterpieces of Buddhist religious art.",
     },
   ];
 
