@@ -4,11 +4,11 @@ import "./Cards.css";
 const HumayunsPage = () => {
   // Configurable table data
   const tableData = [
-    { label: "Location", value: "New City, New Country" },
-    { label: "Timings", value: "From 10:00 AM to 6:00 PM; closed on Mondays" },
+    { label: "Location", value: "Delhi, India" },
+    { label: "Timings", value: "Open daily from sunrise to sunset." },
     {
       label: "Entry Fees",
-      value: "₹ 100 for locals; ₹ 1200 for international visitors;",
+      value: "₹ 40 for locals; ₹ 600 for international visitors;",
     },
     {
       label: "Historical Significance",
