@@ -4,7 +4,7 @@ import "./Cards.css";
 const AlbertPage = () => {
   // Configurable table data
   const tableData = [
-    { label: "Location", value: "New City, New Country" },
+    { label: "Location", value: "India, New Country" },
     { label: "Timings", value: "From 10:00 AM to 6:00 PM; closed on Mondays" },
     {
       label: "Entry Fees",
