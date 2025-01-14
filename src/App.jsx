@@ -2,15 +2,16 @@
 import "./App.css";
 import React from 'react';
 import {Routes, Route } from 'react-router-dom';
-import TajPage from './components/Information/TajPage';
+import TajPage from './DashBoard/Information/TajPage';
 import Home from './DashBoard/Home';
-import QutubPage from "./components/Information/QutubPage";
-import AlbertPage from "./components/Information/AlbertPage";
+import QutubPage from "./DashBoard/Information/QutubPage";
+import AlbertPage from "./DashBoard/Information/AlbertPage";
 import SignIn from "./Login/SignIn";
 import Register from "./Login/Register";
-import HumayunsPage from "./components/Information/HumayunsPage";
-import PatnaPage from "./components/Information/PatnaPage";
-import AjantaPage from "./components/Information/AjantaPage";
+import HumayunsPage from "./DashBoard/Information/HumayunsPage";
+import PatnaPage from "./DashBoard/Information/PatnaPage";
+import AjantaPage from "./DashBoard/Information/AjantaPage";
+import BookTicket from "./DashBoard/BookTicket";
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Route path='/HumayunsPage' element={<HumayunsPage></HumayunsPage>}></Route>
       <Route path='/PatnaPage' element={<PatnaPage></PatnaPage>}></Route>
       <Route path='/AjantaPage' element={<AjantaPage></AjantaPage>}></Route>
+      <Route path='/BookTicket' element={<BookTicket></BookTicket>}></Route>
 
 
     </Routes>

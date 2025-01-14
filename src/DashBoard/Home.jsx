@@ -30,7 +30,7 @@ const Home = () => {
         <div className="glass">
           <h1>Reserve Your Adventure!</h1>
           <h4>Culture Awaits</h4>
-          <button className="ticket">Book Tickets</button>
+         <Link to="/BookTicket"><button className="ticket">Book Tickets</button></Link> 
         </div>
       </div>
       <h1 className="card-heading">View Meuseums / Monuments</h1>
