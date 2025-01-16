@@ -38,7 +38,6 @@ const AjantaPage = () => {
         </table>
 
         <div className="blackBox">
-          <button>Home</button>
           <button>Book Tickets</button>
         </div>
       </div>
