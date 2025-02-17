@@ -1,5 +1,6 @@
 import React from "react";
 import "./Cards.css";
+import { Link } from "react-router-dom";
 
 const PatnaPage = () => {
   // Configurable table data
@@ -39,7 +40,7 @@ const PatnaPage = () => {
 
         <div className="blackBox">
           <button>Home</button>
-          <button>Book Tickets</button>
+          <Link to="/BookTicket"><button>Book Tickets</button></Link> 
         </div>
       </div>
     </div>
