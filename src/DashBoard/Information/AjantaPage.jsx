@@ -39,7 +39,7 @@ const AjantaPage = () => {
         </table>
 
         <div className="blackBox">
-<Link to="/BookTicket"><button>Book Tickets</button></Link> 
+  <Link to="/BookTicket"><button>Book Tickets</button></Link> 
         </div>
       </div>
     </div>
