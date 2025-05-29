@@ -21,7 +21,7 @@ const AjantaPage = () => {
   return (
     <div className="InfoPage">
       <div className="imageContainer">
-        <img src="/images/taj1.png" alt="New Landmark" />
+        <img src="/images/Ajanta.png" alt="New Landmark" />
 
         <table className="overlayTable">
           <tbody>
@@ -39,7 +39,9 @@ const AjantaPage = () => {
         </table>
 
         <div className="blackBox">
-  <Link to="/BookTicket"><button>Book Tickets</button></Link> 
+        <Link to="/"><button>Home</button></Link> 
+
+          <Link to="/BookTicket"><button>Book Tickets</button></Link> 
         </div>
       </div>
     </div>

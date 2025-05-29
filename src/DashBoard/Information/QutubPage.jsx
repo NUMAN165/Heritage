@@ -21,7 +21,7 @@ const QutubPage = () => {
   return (
     <div className="InfoPage">
       <div className="imageContainer">
-        <img src="/images/taj1.png" alt="New Landmark" />
+        <img src="/images/qutub.png" alt="New Landmark" />
 
         <table className="overlayTable">
           <tbody>
@@ -39,7 +39,7 @@ const QutubPage = () => {
         </table>
 
         <div className="blackBox">
-          <button>Home</button>
+        <Link to="/"><button>Home</button></Link> 
           <Link to="/BookTicket"><button>Book Tickets</button></Link> 
         </div>
       </div>

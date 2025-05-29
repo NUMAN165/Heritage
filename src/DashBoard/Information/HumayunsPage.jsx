@@ -21,7 +21,7 @@ const HumayunsPage = () => {
   return (
     <div className="InfoPage">
       <div className="imageContainer">
-        <img src="/images/taj1.png" alt="New Landmark" />
+        <img src="/images/humayans.png" alt="New Landmark" />
 
         <table className="overlayTable">
           <tbody>
@@ -39,7 +39,7 @@ const HumayunsPage = () => {
         </table>
 
         <div className="blackBox">
-          <button>Home</button>
+        <Link to="/"><button>Home</button></Link> 
           <Link to="/BookTicket"><button>Book Tickets</button></Link> 
         </div>
       </div>

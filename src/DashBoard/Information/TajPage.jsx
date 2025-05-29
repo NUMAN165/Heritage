@@ -1,5 +1,7 @@
 import React from "react";
 import "./Cards.css";
+import { Link } from "react-router-dom";
+
 
 const TajPage = () => {
   // Configurable table data
@@ -38,8 +40,8 @@ const TajPage = () => {
         </table>
 
         <div className="blackBox">
-          <button>Home</button>
-          <button>Book Tickets</button>
+        <Link to="/"><button>Home</button></Link> 
+        <Link to="/BookTickets"><button>Home</button></Link> 
         </div>
       </div>
     </div>
