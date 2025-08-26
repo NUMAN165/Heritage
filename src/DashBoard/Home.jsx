@@ -27,12 +27,21 @@ const Home = () => {
             </div>
           </div>
         </div>
+
         <div className="glass">
           <h1>Reserve Your Adventure!</h1>
           <h4>Culture Awaits</h4>
-         <Link to="/BookTicket"><button className="ticket">Book Tickets</button></Link> 
+          <Link to="/BookTicket">
+            <button className="ticket">Book Tickets</button>
+          </Link>
+        </div>
+
+        {/* 🔽 Animated Down Arrow */}
+        <div className="scroll-down">
+          <span></span>
         </div>
       </div>
+
       <h1 className="card-heading">View Meuseums / Monuments</h1>
       <Cardss />
     </>
