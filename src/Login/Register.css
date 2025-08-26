@@ -1,77 +1,262 @@
-.Register-img {
-  position: relative;
-}
+/* AuthPage.css */
 
-.Register-img img {
-  width: 100vw; /* Ensure the image is responsive */
-  height: 100vh; /* Maintain aspect ratio */
-  object-fit: cover; /* Cover the entire area */
-}
-
-.form-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); 
-  width: 450px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.15); 
-  border-radius: 15px;
-  backdrop-filter: blur(15px); 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);  
-  border: 1px solid rgba(255, 255, 255, 0.3); 
-}
-
-.form-group {
-  margin-bottom: 20px;
-  width: 100%; /* Increased margin for better spacing */
-}
-
-
-.input-field { 
+.auth-container {
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  width: 25vw;
-  padding: 10px; 
-  margin-top: 5px;
-  border: none; 
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.2); 
-  backdrop-filter: blur(10px); 
-  color: white; 
-  font-size: 16px; 
-  transition: background 0.3s, border 0.3s;  
-} 
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1587135941948-670b381f08ce?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fHRhaiUyMG1haGFsfGVufDB8fDB8fHww")
+      no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-.input-field:focus {
-  background: rgba(255, 255, 255, 0.3); /* Slightly more opaque when focused */
-  outline: none; /* Remove outline */
-  border: 1px solid rgba(255, 255, 255, 0.5); /* Light border on focus */
+.auth-modal {
+  background: rgba(255, 255, 255, 0.15); /* more transparent for glass look */
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%); /* Safari support */
+  border-radius: 16px;
+  padding: 32px;
+  width: 400px;
+  max-width: 90vw;
+  position: relative;
+
+  /* subtle glassy border */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  /* softer shadow for floating glass */
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 24px;
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+.close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.auth-tabs {
+  display: flex;
+  margin-bottom: 24px;
+  /* background: rgba(60, 60, 60, 0.5); */
+  border-radius: 8px;
+  padding: 4px;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.tab.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.auth-title {
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.name-fields {
+  display: flex;
+  gap: 12px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 16px;
+  background: rgba(60, 60, 60, 0.8);
+  border: 1px solid rgba(80, 80, 80, 0.8);
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s;
 }
 
 .input-field::placeholder {
-  color: rgba(255, 255, 255, 0.7); /* Placeholder color */
+  color: #888;
 }
 
-.submit-button {
-  padding: 12px 20px;
-  font-size: 16px;
-  background: linear-gradient(90deg, #4CAF50, #45a049); 
+.input-field:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(70, 70, 70, 0.9);
+}
+
+.email-field {
+  position: relative;
+}
+
+.email-input::before {
+  content: "📧";
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+}
+
+.phone-field {
+  display: flex;
+  gap: 8px;
+}
+
+.country-code {
+  padding: 16px 12px;
+  background: rgba(60, 60, 60, 0.8);
+  border: 1px solid rgba(80, 80, 80, 0.8);
+  border-radius: 8px;
   color: white;
-  border: none;
-  border-radius: 10px; 
+  font-size: 14px;
+  outline: none;
+  width: 80px;
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s; 
-  width: 40%;
-  margin-left: 130px;
 }
 
-.submit-button:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
+.phone-input {
+  flex: 1;
 }
 
-.error-message {
-  color: red;
-  margin-bottom: 15px;
-  font-weight: bold; /* Bold error messages */
-  text-align: center; /* Center error messages */
+.submit-btn {
+  padding: 16px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.submit-btn:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-1px);
+}
+
+.divider {
+  text-align: center;
+  margin: 24px 0;
+  position: relative;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.divider span {
+  background: rgba(40, 40, 40, 0.95);
+  padding: 0 16px;
+  color: #888;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.social-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.social-btn {
+  flex: 1;
+  padding: 16px;
+  background: rgba(60, 60, 60, 0.8);
+  border: 1px solid rgba(80, 80, 80, 0.8);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.social-btn:hover {
+  background: rgba(70, 70, 70, 0.9);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.google-btn {
+  background: rgba(60, 60, 60, 0.8);
+}
+
+.apple-btn {
+  background: rgba(60, 60, 60, 0.8);
+}
+
+.terms {
+  color: #888;
+  font-size: 12px;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.terms a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.terms a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .auth-modal {
+    padding: 24px;
+    width: calc(100vw - 32px);
+  }
+
+  .name-fields {
+    flex-direction: column;
+  }
+
+  .auth-title {
+    font-size: 20px;
+  }
 }

@@ -511,8 +511,8 @@ body {
 /* Header Styles */
 .booking-header {
   background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
-  padding: 2rem 0;
-  text-align: center;
+  /* padding: 2rem 0; */
+  /* text-align: center; */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   position: relative;
   overflow: hidden;

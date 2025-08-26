@@ -608,8 +608,8 @@ const BookTickets = () => {
     <div className="booking-container">
       <header className="booking-header">
         <div className="header-content">
-          <h1>Heritage India Bookings</h1>
-          <p>Book your visit to India's magnificent museums and monuments</p>
+          <h1>Heritage Pass</h1>
+          {/* <p>Book your visit to India's magnificent museums and monuments</p> */}
         </div>
       </header>
 
