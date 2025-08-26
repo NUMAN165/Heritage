@@ -158,3 +158,44 @@
   color: white;
   margin-right: 20px;
 }
+
+/* Scroll Down Arrow */
+.scroll-down {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.scroll-down span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 3px solid rgb(252, 218, 155);
+  border-right: 3px solid rgb(252, 218, 155);
+  transform: rotate(45deg);
+  margin: 0 auto;
+  animation: bounce 1.5s infinite;
+  opacity: 0.8;
+}
+
+.scroll-down span:hover {
+  opacity: 1;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0) rotate(45deg);
+  }
+  40% {
+    transform: translateY(10px) rotate(45deg);
+  }
+  60% {
+    transform: translateY(5px) rotate(45deg);
+  }
+}
