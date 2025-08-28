@@ -4,15 +4,40 @@ import Card from "react-bootstrap/Card";
 import "../App.css";
 
 const cardData = [
-  { id: 1, title: "Taj Mahal", imgSrc: "./Images/taj1.png",href:"/TajPage" },
-  { id: 2, title: "Qutub Minar", imgSrc: "./Images/qutub.png",href:"/QutubPage" },
-  { id: 3, title: "Albert Hall Meuseum", imgSrc: "./Images/alberthall.png",href:"/AlbertPage" },
+  { id: 1, title: "Taj Mahal", imgSrc: "./Images/taj1.png", href: "/TajPage" },
+  {
+    id: 2,
+    title: "Qutub Minar",
+    imgSrc: "./Images/qutub.png",
+    href: "/QutubPage",
+  },
+  {
+    id: 3,
+    title: "Albert Hall Meuseum",
+    imgSrc: "./Images/alberthall.png",
+    href: "/AlbertPage",
+  },
 ];
 
 const cardData2 = [
-  { id: 4, title: "Humayuns Tomb", imgSrc: "./Images/humayans.png",href:"/HumayunsPage" },
-  { id: 5, title: "Ajanta Caves", imgSrc: "./Images/Ajanta.png",href:"/AjantaPage" },
-  { id: 6, title: "Patna Meusems", imgSrc: "./Images/Patna.png",href:"/PatnaPage" },
+  {
+    id: 4,
+    title: "Humayuns Tomb",
+    imgSrc: "./Images/humayans.png",
+    href: "/HumayunsPage",
+  },
+  {
+    id: 5,
+    title: "Ajanta Caves",
+    imgSrc: "./Images/Ajanta.png",
+    href: "/AjantaPage",
+  },
+  {
+    id: 6,
+    title: "Patna Meusems",
+    imgSrc: "./Images/Patna.png",
+    href: "/PatnaPage",
+  },
 ];
 
 const Cardss = () => {
@@ -28,7 +53,9 @@ const Cardss = () => {
             />
             <Card.Body>
               <Card.Title>{card.title}</Card.Title>
-              <Button variant="primary" href={card.href}>Go</Button>
+              <Button variant="primary" href={card.href}>
+                Go
+              </Button>
             </Card.Body>
           </Card>
         ))}
@@ -44,7 +71,9 @@ const Cardss = () => {
             />
             <Card.Body>
               <Card.Title>{card.title}</Card.Title>
-              <Button variant="primary" href={card.href}>Go</Button>
+              <Button variant="primary" href={card.href}>
+                Go
+              </Button>
             </Card.Body>
           </Card>
         ))}

@@ -210,10 +210,10 @@ const BookTickets = () => {
                 <span className="price-label">Child</span>
                 <span className="price-value">₹{monument.prices.child}</span>
               </div>
-              <div className="price-item">
+              {/* <div className="price-item">
                 <span className="price-label">Student</span>
                 <span className="price-value">₹{monument.prices.student}</span>
-              </div>
+              </div> */}
               <div className="price-item">
                 <span className="price-label">Foreigner</span>
                 <span className="price-value">
@@ -330,7 +330,7 @@ const BookTickets = () => {
                 </button>
               </div>
             </div>
-            <div className="ticket-type">
+            {/* <div className="ticket-type">
               <label>
                 Student Tickets (₹
                 {monuments.find((m) => m.id === formData.monument)?.prices
@@ -362,7 +362,7 @@ const BookTickets = () => {
                   +
                 </button>
               </div>
-            </div>
+            </div> */}
             <div className="ticket-type">
               <label>
                 Foreigner Tickets (₹
@@ -542,7 +542,7 @@ const BookTickets = () => {
                 </span>
               </div>
             )}
-            {formData.studentTickets > 0 && (
+            {/* {formData.studentTickets > 0 && (
               <div className="breakdown-item">
                 <span>Student x {formData.studentTickets}</span>
                 <span>
@@ -552,7 +552,7 @@ const BookTickets = () => {
                       .student}
                 </span>
               </div>
-            )}
+            )} */}
             {formData.foreignerTickets > 0 && (
               <div className="breakdown-item">
                 <span>Foreigner x {formData.foreignerTickets}</span>

@@ -5,6 +5,9 @@ import { Link } from "react-router-dom";
 const TajPage = () => {
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [showVirtualTour, setShowVirtualTour] = useState(false);
+  // const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+  // const [audioProgress, setAudioProgress] = useState(0);
+  const [showMap, setShowMap] = useState(false);
 
   // Image gallery data
   const galleryImages = [
@@ -22,12 +25,12 @@ const TajPage = () => {
       value: "Agra, Uttar Pradesh, India",
       detail: "On the banks of Yamuna River",
     },
-    {
-      icon: "🕒",
-      title: "Timings",
-      value: "6:00 AM - 6:30 PM",
-      detail: "Closed on Fridays",
-    },
+    // {
+    //   icon: "🕒",
+    //   title: "Timings",
+    //   value: "6:00 AM - 6:30 PM",
+    //   detail: "Closed on Fridays",
+    // },
     {
       icon: "💰",
       title: "Entry Fees",
@@ -51,7 +54,7 @@ const TajPage = () => {
       value: "Agra Cantt Railway Station",
     },
     { icon: "🌅", title: "Best Time", value: "October to March" },
-    { icon: "⏰", title: "Duration", value: "2-3 hours recommended" },
+    // { icon: "⏰", title: "Duration", value: "2-3 hours recommended" },
   ];
 
   // Nearby attractions
@@ -59,31 +62,7 @@ const TajPage = () => {
     { name: "Agra Fort", distance: "2.5 km", rating: "4.5★" },
     { name: "Mehtab Bagh", distance: "1.5 km", rating: "4.2★" },
     { name: "Itmad-ud-Daulah", distance: "6 km", rating: "4.3★" },
-    { name: "Fatehpur Sikri", distance: "40 km", rating: "4.4★" },
-  ];
-
-  // Reviews data
-  const reviews = [
-    {
-      name: "Sarah Johnson",
-      rating: 5,
-      comment: "Absolutely breathtaking! A must-visit wonder of the world.",
-      date: "March 2024",
-    },
-    {
-      name: "Raj Patel",
-      rating: 5,
-      comment:
-        "Best visited during sunrise. The marble changes colors beautifully.",
-      date: "February 2024",
-    },
-    {
-      name: "Emily Chen",
-      rating: 4,
-      comment:
-        "Crowded but worth every moment. Book tickets online to skip queues.",
-      date: "January 2024",
-    },
+    // { name: "Fatehpur Sikri", distance: "40 km", rating: "4.4★" },
   ];
 
   const nextImage = () => {
@@ -94,10 +73,6 @@ const TajPage = () => {
     setActiveImageIndex(
       (prev) => (prev - 1 + galleryImages.length) % galleryImages.length
     );
-  };
-
-  const playAudioGuide = () => {
-    alert("Audio guide feature coming soon! 🎧");
   };
 
   return (
@@ -120,9 +95,6 @@ const TajPage = () => {
                 onClick={() => setShowVirtualTour(true)}
               >
                 🌐 Virtual Tour
-              </button>
-              <button className="btn-secondary" onClick={playAudioGuide}>
-                🎧 Audio Guide
               </button>
             </div>
           </div>
@@ -189,10 +161,37 @@ const TajPage = () => {
       <section className="map-section">
         <h2 className="section-title">Location & Directions</h2>
         <div className="map-container">
-          <div className="map-placeholder">
-            <p>🗺️ Interactive Map</p>
-            <button className="btn-map">Get Directions</button>
-          </div>
+          {!showMap ? (
+            <div className="map-placeholder">
+              <p>🗺️ Interactive Map</p>
+              <button className="btn-map" onClick={() => setShowMap(true)}>
+                Load Map & Get Directions
+              </button>
+            </div>
+          ) : (
+            <div className="map-embed">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3595.0765777337515!2d78.04018461500393!3d27.175144182873583!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39747121a187d6a3%3A0xc4e9a0a69eb9c1ac!2sTaj%20Mahal!5e0!3m2!1sen!2sin!4v1693485726889!5m2!1sen!2sin"
+                width="100%"
+                height="400"
+                style={{ border: 0, borderRadius: "15px" }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Taj Mahal Location"
+              ></iframe>
+              <div className="map-controls">
+                {/* <button className="btn-directions">📱 Get Directions</button>
+                <button className="btn-streetview">👀 Street View</button> */}
+                <button
+                  className="btn-satellite"
+                  onClick={() => setShowMap(false)}
+                >
+                  🗺️ Hide Map
+                </button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
@@ -235,7 +234,7 @@ const TajPage = () => {
       </section>
 
       {/* Reviews Section */}
-      <section className="reviews-section">
+      {/* <section className="reviews-section">
         <h2 className="section-title">Visitor Reviews</h2>
         <div className="reviews-grid">
           {reviews.map((review, index) => (
@@ -251,7 +250,7 @@ const TajPage = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Action Buttons */}
       <section className="action-section">
@@ -271,17 +270,37 @@ const TajPage = () => {
           className="modal-overlay"
           onClick={() => setShowVirtualTour(false)}
         >
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h3>360° Virtual Tour</h3>
-            <div className="virtual-tour-placeholder">
-              <p>🌐 Immersive 360° experience coming soon!</p>
-              <p>Explore every corner of the Taj Mahal from your device</p>
+          <div
+            className="modal-content virtual-tour-modal"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3>360° Virtual Tour - Taj Mahal</h3>
+            <div className="virtual-tour-viewer">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!4v1693485726889!6m8!1m7!1sCAoSLEFGMVFpcE9fUEhVa3NZN2ZqRWJOQkNjQ3hFVzFqV3FhZDNRcVNHVzdFQ3Ft!2m2!1d27.175144182873583!2d78.04218461500393!3f270!4f0!5f0.7820865974627469"
+                width="100%"
+                height="400"
+                style={{ border: 0, borderRadius: "15px" }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Taj Mahal 360° Virtual Tour"
+              ></iframe>
+              <div className="virtual-tour-controls">
+                <button className="tour-btn">🖱️ Drag to Look Around</button>
+                <button className="tour-btn">🔍 Click + to Zoom</button>
+                <button className="tour-btn">📱 Full Screen</button>
+              </div>
+            </div>
+            <div className="virtual-tour-info">
+              <p>🌟 Explore the Taj Mahal in stunning 360° detail</p>
+              <p>📱 Use mouse/touch to navigate • Scroll to zoom</p>
             </div>
             <button
               className="btn-close"
               onClick={() => setShowVirtualTour(false)}
             >
-              ✕ Close
+              ✕ Close Virtual Tour
             </button>
           </div>
         </div>
