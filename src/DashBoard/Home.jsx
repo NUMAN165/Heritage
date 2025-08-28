@@ -1,9 +1,9 @@
 import "../App.css";
 import Cardss from "./Cardss";
-import { useRef } from "react";
-import { CiLogin } from "react-icons/ci";
+import { useRef, useEffect, useContext } from "react";
 import { FaUserFriends } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+import { UserContext } from "../UserContext";
 
 const Home = () => {
   // 👇 create a ref for the Cardss section
@@ -13,25 +13,37 @@ const Home = () => {
     cardsRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const location = useLocation();
+  const { user } = useContext(UserContext);
+
   return (
     <>
       <div className="glassbody">
         <div className="navbar">
           <h1>Heritage Pass </h1>
           <div className="Sign-In">
-            <div>
-              {/* 👇 Instead of routing, trigger scroll */}
-              <button className="btn-primary" onClick={handleScrollToCards}>
-                Information <CiLogin />
-              </button>
-            </div>
-            <div>
-              <Link to="/Register">
-                <button className="btn-primary">
-                  Register <FaUserFriends />
-                </button>
-              </Link>
-            </div>
+            {!user && (
+              <div>
+                <Link to="/Register">
+                  <button className="btn-primary">
+                    Register <FaUserFriends />
+                  </button>
+                </Link>
+              </div>
+            )}
+            {user && (
+              <div
+                className="user-info"
+                style={{ display: "flex", alignItems: "center", gap: "10px" }}
+              >
+                <img
+                  src="https://randomuser.me/api/portraits/men/1.jpg"
+                  alt="Profile"
+                  style={{ width: 32, height: 32, borderRadius: "50%" }}
+                />
+                <span style={{ fontWeight: "bold" }}>{user.firstName}</span>
+              </div>
+            )}
           </div>
         </div>
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../TajPage.css";
+import "./TajPage.css";
 import { Link } from "react-router-dom";
 
 const TajPage = () => {

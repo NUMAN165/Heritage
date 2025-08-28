@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../TajPage.css";
+import "./TajPage.css";
 import { Link } from "react-router-dom";
 
 const AjantaPage = () => {
@@ -11,10 +11,10 @@ const AjantaPage = () => {
 
   // Image gallery data
   const galleryImages = [
-    { src: "/images/taj1.png", alt: "Taj Mahal Main View" },
-    { src: "/images/taj2.png", alt: "Taj Mahal at Sunset" },
-    { src: "/images/taj3.png", alt: "Taj Mahal Gardens" },
-    { src: "/images/taj4.png", alt: "Taj Mahal Interior" },
+    { src: "/images/ajanta1.png", alt: "Ajanta Caves Main View" },
+    { src: "/images/ajanta2.png", alt: "Ajanta Caves at Sunset" },
+    { src: "/images/ajanta3.png", alt: "Ajanta Caves Gardens" },
+    { src: "/images/ajanta4.png", alt: "Ajanta Caves Interior" },
   ];
 
   // Quick info data with icons

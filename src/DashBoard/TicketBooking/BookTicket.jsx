@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import "./BookingPage.css";
+import React, { useState, useEffect } from "react";
+import "../TicketBooking/BookingPage.css";
 
-const BookTickets = () => {
+const BookTicket = () => {
   const [formData, setFormData] = useState({
     monument: "",
     visitDate: "",
@@ -131,7 +131,7 @@ const BookTickets = () => {
     return total;
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     setTotalAmount(calculateTotal());
   }, [formData]);
 
@@ -605,64 +605,79 @@ const BookTickets = () => {
   );
 
   return (
-    <div className="booking-container">
-      <header className="booking-header">
-        <div className="header-content">
-          <h1>Heritage Pass</h1>
-          {/* <p>Book your visit to India's magnificent museums and monuments</p> */}
-        </div>
-      </header>
-
-      <div className="booking-content">
-        {/* {renderProgressBar()} */}
-
-        <div onSubmit={handleSubmit} className="booking-form-container">
-          {currentStep === 1 && renderStep1()}
-          {currentStep === 2 && renderStep2()}
-          {currentStep === 3 && renderStep3()}
-          {currentStep === 4 && renderStep4()}
-
-          <div className="form-navigation">
-            {currentStep > 1 && (
-              <button
-                type="button"
-                onClick={prevStep}
-                className="btn btn-secondary"
-              >
-                Previous
-              </button>
-            )}
-            {currentStep < 4 ? (
-              <button
-                type="button"
-                onClick={nextStep}
-                className="btn btn-primary"
-                disabled={
-                  (currentStep === 1 && !formData.monument) ||
-                  (currentStep === 2 &&
-                    (!formData.visitDate || !formData.timeSlot))
-                }
-              >
-                Next
-              </button>
-            ) : (
-              <button
-                type="button"
-                onClick={handleSubmit}
-                className="btn btn-primary"
-              >
-                Complete Booking - ₹{totalAmount}
-              </button>
-            )}
+    <>
+      <div
+        className="booking-bg"
+        style={{
+          backgroundImage: "url('/Images/taj1.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          minHeight: "100vh",
+          width: "100vw",
+          position: "fixed",
+          top: 0,
+          left: 0,
+          zIndex: -1,
+        }}
+      />
+      <div
+        className="booking-container"
+        style={{ position: "relative", zIndex: 2 }}
+      >
+        <header className="booking-header">
+          <div className="header-content">
+            <h1>Heritage Pass</h1>
+            {/* <p>Book your visit to India's magnificent museums and monuments</p> */}
+          </div>
+        </header>
+        <div className="booking-content">
+          {/* {renderProgressBar()} */}
+          <div onSubmit={handleSubmit} className="booking-form-container">
+            {currentStep === 1 && renderStep1()}
+            {currentStep === 2 && renderStep2()}
+            {currentStep === 3 && renderStep3()}
+            {currentStep === 4 && renderStep4()}
+            <div className="form-navigation">
+              {currentStep > 1 && (
+                <button
+                  type="button"
+                  onClick={prevStep}
+                  className="btn btn-secondary"
+                >
+                  Previous
+                </button>
+              )}
+              {currentStep < 4 ? (
+                <button
+                  type="button"
+                  onClick={nextStep}
+                  className="btn btn-primary"
+                  disabled={
+                    (currentStep === 1 && !formData.monument) ||
+                    (currentStep === 2 &&
+                      (!formData.visitDate || !formData.timeSlot))
+                  }
+                >
+                  Next
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={handleSubmit}
+                  className="btn btn-primary"
+                >
+                  Complete Booking - ₹{totalAmount}
+                </button>
+              )}
+            </div>
           </div>
         </div>
+        <footer className="booking-footer">
+          <p>© 2025 Heritage India Bookings | Support: 1800-XXX-XXXX</p>
+        </footer>
       </div>
-
-      <footer className="booking-footer">
-        <p>© 2025 Heritage India Bookings | Support: 1800-XXX-XXXX</p>
-      </footer>
-    </div>
+    </>
   );
 };
 
-export default BookTickets;
+export default BookTicket;

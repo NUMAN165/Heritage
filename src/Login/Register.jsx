@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import { UserContext } from "../UserContext";
 import "./Register.css";
 
 const Register = () => {
@@ -10,6 +12,8 @@ const Register = () => {
     phone: "",
     password: "",
   });
+  const navigate = useNavigate();
+  const { setUser } = useContext(UserContext);
 
   const handleInputChange = (e) => {
     setFormData({
@@ -18,8 +22,48 @@ const Register = () => {
     });
   };
 
-  const handleSubmit = () => {
-    console.log("Form submitted:", formData);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!formData.email || !formData.password) {
+      alert("Email and password are required.");
+      return;
+    }
+    const url = isSignUp
+      ? "http://localhost:5000/register"
+      : "http://localhost:5000/login";
+    const payload = isSignUp
+      ? {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          password: formData.password,
+        }
+      : {
+          email: formData.email,
+          password: formData.password,
+        };
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        alert(data.message);
+        if (isSignUp) {
+          setIsSignUp(false); // Switch to login after successful registration
+        } else {
+          setUser({ firstName: data.firstName, email: formData.email });
+          navigate("/"); // Redirect to Home page
+        }
+      } else {
+        alert(data.message || "Error occurred");
+      }
+    } catch (error) {
+      alert("Network error");
+    }
   };
 
   return (
@@ -44,7 +88,7 @@ const Register = () => {
           {isSignUp ? "Create an account" : "Sign in to your account"}
         </h2>
 
-        <div className="auth-form">
+        <form onSubmit={handleSubmit} className="auth-form">
           {isSignUp && (
             <div className="name-fields">
               <input
@@ -93,6 +137,19 @@ const Register = () => {
             </div>
           )}
 
+          {isSignUp && (
+            <div className="password-field">
+              <input
+                type="password"
+                name="password"
+                placeholder="Create password"
+                value={formData.password}
+                onChange={handleInputChange}
+                className="input-field"
+              />
+            </div>
+          )}
+
           {!isSignUp && (
             <input
               type="password"
@@ -104,10 +161,10 @@ const Register = () => {
             />
           )}
 
-          <button onClick={handleSubmit} className="submit-btn">
+          <button type="submit" className="submit-btn">
             {isSignUp ? "Create an account" : "Sign in"}
           </button>
-        </div>
+        </form>
 
         <div className="divider">
           <span>OR {isSignUp ? "SIGN UP" : "SIGN IN"} WITH</span>
