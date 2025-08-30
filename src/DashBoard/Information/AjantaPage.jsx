@@ -227,7 +227,7 @@ const AjantaPage = () => {
               thousands of artisans and craftsmen from across the empire. The
               monument changes color throughout the day, appearing pinkish in
               the morning, milky white in the evening, and golden under
-              moonlight.
+              moonlight
             </p>
           </div>
         </div>
