@@ -11,7 +11,7 @@ const AjantaPage = () => {
 
   // Image gallery data
   const galleryImages = [
-    { src: "/images/ajanta1.png", alt: "Ajanta Caves Main View" },
+    { src: "/images/Ajanta.png", alt: "Ajanta Caves Main View" },
     { src: "/images/ajanta2.png", alt: "Ajanta Caves at Sunset" },
     { src: "/images/ajanta3.png", alt: "Ajanta Caves Gardens" },
     { src: "/images/ajanta4.png", alt: "Ajanta Caves Interior" },
@@ -22,8 +22,8 @@ const AjantaPage = () => {
     {
       icon: "📍",
       title: "Location",
-      value: "Agra, Uttar Pradesh, India",
-      detail: "On the banks of Yamuna River",
+      value: "Aurangabad, Maharashtra, India",
+      detail: "UNESCO World Heritage Site",
     },
     // {
     //   icon: "🕒",
@@ -41,17 +41,21 @@ const AjantaPage = () => {
       icon: "🏛",
       title: "Built",
       value: "1632 - 1653 AD",
-      detail: "Mughal Emperor Shah Jahan",
+      detail: "Built by",
     },
   ];
 
   // Travel info
   const travelInfo = [
-    { icon: "✈️", title: "Nearest Airport", value: "Agra Airport (7 km)" },
+    {
+      icon: "✈️",
+      title: "Nearest Airport",
+      value: "Aurangabad Airport (100 km)",
+    },
     {
       icon: "🚂",
       title: "Nearest Railway",
-      value: "Agra Cantt Railway Station",
+      value: "Aurangabad Railway Station",
     },
     { icon: "🌅", title: "Best Time", value: "October to March" },
     // { icon: "⏰", title: "Duration", value: "2-3 hours recommended" },
@@ -59,7 +63,7 @@ const AjantaPage = () => {
 
   // Nearby attractions
   const nearbyAttractions = [
-    { name: "Agra Fort", distance: "2.5 km", rating: "4.5★" },
+    { name: "Ellora Caves", distance: "2.5 km", rating: "4.5★" },
     { name: "Mehtab Bagh", distance: "1.5 km", rating: "4.2★" },
     { name: "Itmad-ud-Daulah", distance: "6 km", rating: "4.3★" },
     // { name: "Fatehpur Sikri", distance: "40 km", rating: "4.4★" },
@@ -87,8 +91,10 @@ const AjantaPage = () => {
           />
           <div className="hero-gradient-overlay"></div>
           <div className="hero-content">
-            <h1 className="monument-title">Taj Mahal</h1>
-            <p className="monument-tagline">Symbol of Eternal Love</p>
+            <h1 className="monument-title">Ajanta Caves</h1>
+            <p className="monument-tagline">
+              Ancient Buddhist rock-cut caves with stunning paintings
+            </p>
             <div className="hero-buttons">
               <button
                 className="btn-primary"

@@ -11,10 +11,10 @@ const AlbertPage = () => {
 
   // Image gallery data
   const galleryImages = [
-    { src: "/images/taj1.png", alt: "Taj Mahal Main View" },
-    { src: "/images/taj2.png", alt: "Taj Mahal at Sunset" },
-    { src: "/images/taj3.png", alt: "Taj Mahal Gardens" },
-    { src: "/images/taj4.png", alt: "Taj Mahal Interior" },
+    { src: "/images/alberthall.png", alt: "Albert Hall Museum Main View" },
+    { src: "/images/alberthall2.png", alt: "Albert Hall Museum at Sunset" },
+    { src: "/images/alberthall3.png", alt: "Albert Hall Museum Gardens" },
+    { src: "/images/alberthall4.png", alt: "Albert Hall Museum Interior" },
   ];
 
   // Quick info data with icons
@@ -87,8 +87,10 @@ const AlbertPage = () => {
           />
           <div className="hero-gradient-overlay"></div>
           <div className="hero-content">
-            <h1 className="monument-title">Taj Mahal</h1>
-            <p className="monument-tagline">Symbol of Eternal Love</p>
+            <h1 className="monument-title">Albert Hall Museum</h1>
+            <p className="monument-tagline">
+              A Glimpse into Rajasthan's Royal History
+            </p>
             <div className="hero-buttons">
               <button
                 className="btn-primary"

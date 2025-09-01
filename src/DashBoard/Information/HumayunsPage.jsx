@@ -11,10 +11,10 @@ const HumayunsPage = () => {
 
   // Image gallery data
   const galleryImages = [
-    { src: "/images/taj1.png", alt: "Taj Mahal Main View" },
-    { src: "/images/taj2.png", alt: "Taj Mahal at Sunset" },
-    { src: "/images/taj3.png", alt: "Taj Mahal Gardens" },
-    { src: "/images/taj4.png", alt: "Taj Mahal Interior" },
+    { src: "/images/humayans.png", alt: "Humayun's Tomb Main View" },
+    { src: "/images/humayun2.png", alt: "Humayun's Tomb at Sunset" },
+    { src: "/images/humayun3.png", alt: "Humayun's Tomb Gardens" },
+    { src: "/images/humayun4.png", alt: "Humayun's Tomb Interior" },
   ];
 
   // Quick info data with icons
@@ -87,8 +87,8 @@ const HumayunsPage = () => {
           />
           <div className="hero-gradient-overlay"></div>
           <div className="hero-content">
-            <h1 className="monument-title">Taj Mahal</h1>
-            <p className="monument-tagline">Symbol of Eternal Love</p>
+            <h1 className="monument-title">Humayuns Tomb</h1>
+            <p className="monument-tagline">A UNESCO World Heritage Site</p>
             <div className="hero-buttons">
               <button
                 className="btn-primary"
