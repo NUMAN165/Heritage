@@ -37,11 +37,6 @@ const SignIn = () => {
       password:password
     }
 
-
-    // Log the input values 
-    console.log('Email:', email);
-    console.log('Password:', password);
-
     try {
       const response = await axios.post('http://localhost:5000/api/login', finalUser)
       if(response){        

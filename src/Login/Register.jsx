@@ -12,6 +12,7 @@ const Register = () => {
     phone: "",
     password: "",
   });
+  
   const navigate = useNavigate();
   const { setUser } = useContext(UserContext);
 
@@ -29,8 +30,8 @@ const Register = () => {
       return;
     }
     const url = isSignUp
-      ? "http://localhost:5000/register"
-      : "http://localhost:5000/login";
+      ? "http://localhost:5001/register"
+      : "http://localhost:5001/login";
     const payload = isSignUp
       ? {
           firstName: formData.firstName,
